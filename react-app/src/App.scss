@@ -1,0 +1,83 @@
+.wrapper {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  // https://www.freepik.com/free-photo/abstract-luxury-plain-blur-grey-black-gradient-used-as-background-studio-wall-display-your-products_17601164.htm#page=1&query=light%20grey%20texture%20background&position=2&from_view=keyword
+  background-image: url("https://image.freepik.com/free-photo/abstract-luxury-plain-blur-grey-black-gradient-used-as-background-studio-wall-display-your-products_1258-63644.jpg");
+
+  .information-header {
+      width: 900px;
+      height: 500px;
+    display: flex;
+    flex-direction: column;
+
+    &__top {
+      background-color: rgba(110, 231, 183, 1);
+      flex: 2;
+      border-top-right-radius: 24px;
+      border-top-left-radius: 24px;
+      .content {
+        margin: 40px 30px 0 30px;
+         position: relative;
+        display: flex;
+        .image-wrapper {
+           position: absolute;
+           top: 30px;
+          background: white;
+          padding: 3px 3px 0px 3px;
+
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        }
+
+        .generic-info {
+          flex: 1;
+          align-items: center;
+          display: flex;
+          margin-top: 40px;
+          color: white;
+          flex-direction: column;
+          margin-left: 100px;
+
+          &__name {
+            font-size: 36px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            line-height: 1;
+          }
+
+          &__social {
+            display: flex;
+            width: 130px;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            .icon-wrapper {
+              background-color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 4px;
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+    &__bottom {
+      background-color: rgba(249, 250, 251, 1);
+      flex: 3;
+      border-bottom-right-radius: 24px;
+      border-bottom-left-radius: 24px;
+    }
+  }
+}
