@@ -3,7 +3,7 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -13,10 +13,14 @@
   background-image: url("https://image.freepik.com/free-photo/abstract-luxury-plain-blur-grey-black-gradient-used-as-background-studio-wall-display-your-products_1258-63644.jpg");
 
   .information-header {
-      width: 900px;
-      height: 500px;
+    width: 900px;
+    height: 500px;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 715px) {
+      width: 100vw;
+    }
 
     &__top {
       background-color: rgba(110, 231, 183, 1);
@@ -25,15 +29,29 @@
       border-top-left-radius: 24px;
       .content {
         margin: 40px 30px 0 30px;
-         position: relative;
+        position: relative;
         display: flex;
+
+        @media (max-width: 715px) {
+          flex-direction: column;
+        }
         .image-wrapper {
-           position: absolute;
-           top: 30px;
+          position: absolute;
+          top: 30px;
           background: white;
           padding: 3px 3px 0px 3px;
-
           box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+          @media (max-width: 715px) {
+            position: inherit;
+            display: flex;
+            justify-content: center;
+            width: fit-content;
+            align-self: center;
+            img {
+              width: 300px;
+              height: 250px;
+            }
+          }
         }
 
         .generic-info {
@@ -44,6 +62,11 @@
           color: white;
           flex-direction: column;
           margin-left: 100px;
+
+          @media (max-width: 715px) {
+            margin-left: 0;
+            white-space: nowrap;
+          }
 
           &__name {
             font-size: 36px;
@@ -58,6 +81,10 @@
             align-items: center;
             justify-content: space-between;
             margin-top: 30px;
+
+            @media (max-width: 715px) {
+              margin: 10px 0;
+            }
 
             .icon-wrapper {
               background-color: white;
